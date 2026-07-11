@@ -1,0 +1,6 @@
+{
+  "name": "Maheshwari Sweets",
+  "description": "Premium sweet shop and catering services in Satna, offering authentic traditional sweets, namkeen, custom gift boxes, and instant online ordering.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

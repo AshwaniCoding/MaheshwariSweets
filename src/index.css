@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-maroon-50: #FFF5F6;
+  --color-maroon-100: #FFE3E6;
+  --color-maroon-200: #FCBCC3;
+  --color-maroon-350: #D0415A;
+  --color-maroon-500: #7B1E3A; /* Royal Maroon */
+  --color-maroon-600: #68172F;
+  --color-maroon-700: #5B1025; /* Deep Burgundy */
+  --color-maroon-800: #420A1A;
+  --color-maroon-900: #2C050F;
+  
+  --color-gold-50: #FFFDF5;
+  --color-gold-100: #FFF9E0;
+  --color-gold-200: #FFF2C2;
+  --color-gold-400: #F3CA40;
+  --color-gold-500: #D4AF37; /* Rich Gold */
+  --color-gold-600: #B89326;
+  --color-gold-700: #93741B;
+  
+  --color-saffron: #FF8A00;
+  --color-pistachio: #6FBF73;
+  --color-rosepink: #FF6F91;
+  --color-cream: #FFF8F0;
+  
+  --font-sans: "Inter", "sans-serif";
+  --font-serif: "Playfair Display", "serif";
+  --font-mono: "JetBrains Mono", "monospace";
+}
+
+@layer base {
+  body {
+    @apply bg-cream/30 text-stone-800 font-sans antialiased selection:bg-gold-500/30 selection:text-maroon-900;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif tracking-tight;
+  }
+}
+
+/* Custom Gilded Glassmorphism */
+.glass-header {
+  background: rgba(255, 248, 240, 0.85);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+/* Gilded Premium Glow */
+.gold-glow {
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.25);
+}
+
+.gold-glow-hover:hover {
+  box-shadow: 0 0 30px rgba(212, 175, 55, 0.45);
+}
+
+/* Custom Shimmer/Gold Reflection Effect */
+.gold-shimmer {
+  background: linear-gradient(
+    135deg,
+    #7B1E3A 0%,
+    #D4AF37 50%,
+    #5B1025 100%
+  );
+  background-size: 200% auto;
+  animation: gold-shimmer-anim 4s ease infinite;
+}
+
+@keyframes gold-shimmer-anim {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Gentle Float Animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Scrollbar customizations */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FFF8F0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #E6DFD5;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7B1E3A;
+}
+
